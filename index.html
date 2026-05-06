@@ -101,15 +101,7 @@
 
   // === MODES avec écarts marqués ===
   const MODES={
-    easy:{
-      ballSpeed:0.0035,   // balle très lente
-      speedInc:1.015,     // accélère peu par échange
-      maxSpeed:0.014,     // plafond bas
-      aiSpeed:0.14,       // IA très lente
-      aiError:90,         // IA très imprécise
-      aiReact:0.35,       // IA prédit mal
-    },
-    normal:{
+    easy:{                // = ancien NORMAL
       ballSpeed:0.006,
       speedInc:1.04,
       maxSpeed:0.025,
@@ -117,13 +109,21 @@
       aiError:22,
       aiReact:0.8,
     },
-    hard:{
-      ballSpeed:0.0095,   // balle très rapide
-      speedInc:1.06,      // accélère fort
-      maxSpeed:0.038,     // plafond haut
-      aiSpeed:0.90,       // IA quasi instantanée
-      aiError:4,          // quasi pas d'erreur
-      aiReact:0.97,       // prédit quasi parfaitement
+    normal:{              // = ancien RAPIDE
+      ballSpeed:0.0095,
+      speedInc:1.06,
+      maxSpeed:0.038,
+      aiSpeed:0.90,
+      aiError:4,
+      aiReact:0.97,
+    },
+    hard:{                // NOUVEAU : très très rapide
+      ballSpeed:0.014,    // balle 47% plus rapide que l'ancien hard
+      speedInc:1.075,     // accélère encore plus à chaque échange
+      maxSpeed:0.055,     // plafond ultra haut
+      aiSpeed:1.10,       // IA instantanée
+      aiError:1.5,        // quasi aucune erreur
+      aiReact:0.99,       // prédiction quasi parfaite
     },
   };
 
